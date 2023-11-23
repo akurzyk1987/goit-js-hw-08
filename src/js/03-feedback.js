@@ -29,6 +29,10 @@ form.addEventListener('input', throttledSave);
 form.addEventListener('submit', evt => {
   evt.preventDefault();
   localStorage.removeItem(localStorageKey);
+  console.log({
+    email: `${emailInput.value}`,
+    message: `${messageInput.value}`,
+  });
   evt.target.reset();
 });
 
